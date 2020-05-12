@@ -2,12 +2,12 @@ import React from 'react'
 
 export default function SearchBox() {
     return (
-        <div>
+        <div className="searchbox">
           <span>
             <form>
-              <label for="searchinput">Youtube Clone</label>
-              <input type="text" id="searchinput" name="searchinput" />
-              <input type="submit" value="GO" />
+              <label className="searchbox__label" for="searchinput">MatTube</label>
+              <input className="searchbox__input" type="text" id="searchinput" name="searchinput" />
+              <button className="btn btn--primary">GO</button>
             </form>
           </span>
         </div>

@@ -1,0 +1,25 @@
+.searchbox {
+    border-bottom: 1px solid black;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+.searchbox__label {
+    font-weight: bold;
+    font-size: xx-large;
+    vertical-align: middle;
+}
+
+.searchbox__input {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    width: 400px;
+    height: 35px;
+    margin-left: 20px;
+    margin-right: 5px;
+    font-size: large;
+    vertical-align: middle;
+}
