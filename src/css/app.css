@@ -2,6 +2,8 @@
 @import 'font.css';
 @import 'buttons.css';
 @import 'searchbox.css';
+@import 'searchresult.css';
+@import 'videoplayer.css';
 
 *, *::before, *::after {
     font-family: RobotoCondensed, sans-serif;

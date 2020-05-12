@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function SearchResult() {
     return (
-        <div>
+        <div className="searchresult">
             This is a SearchResult
         </div>
     )
