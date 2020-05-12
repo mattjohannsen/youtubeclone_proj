@@ -2,14 +2,12 @@
 @import 'font.css';
 @import 'buttons.css';
 @import 'searchbox.css';
-@import 'searchresult.css';
+@import 'search-result-list.css';
 @import 'videoplayer.css';
+@import 'related-search.css';
 
 *, *::before, *::after {
     font-family: RobotoCondensed, sans-serif;
     box-sizing: border-box;
   }
 
-body {
-    background: white;
-}

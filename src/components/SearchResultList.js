@@ -3,7 +3,7 @@ import SearchResult from './SearchResult';
 
 export default function SearchResultList() {
     return (
-        <div>
+        <div >
             <SearchResult />
             <SearchResult />
         </div>

@@ -3,7 +3,7 @@ import RelatedSearch from './RelatedSearch';
 
 export default function RelatedSearchList() {
     return (
-        <div>
+        <div className="related-search-list">
             <RelatedSearch />
             <RelatedSearch />
             <RelatedSearch />
