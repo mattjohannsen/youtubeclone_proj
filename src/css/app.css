@@ -1,0 +1,11 @@
+@import-normalize;
+@import 'font.css';
+
+*, *::before, *::after {
+    font-family: RobotoCondensed, sans-serif;
+    box-sizing: border-box;
+  }
+
+body {
+    background: red;
+}
