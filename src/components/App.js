@@ -3,6 +3,8 @@ import '../css/app.css';
 import SearchBox from './SearchBox';
 import SearchResultList from './SearchResultList';
 import VideoPlayer from './VideoPlayer';
+import RelatedSearchList from './RelatedSearchList';
+
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
       <SearchBox />
       <SearchResultList />
       <VideoPlayer />
+      <RelatedSearchList />
     </div>
   );
 }
