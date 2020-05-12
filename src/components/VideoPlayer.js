@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function SearchResult() {
+export default function VideoPlayer() {
     return (
         <div>
-            This is a SearchResult
+            This is the VideoPlayer
         </div>
     )
 }
