@@ -5,7 +5,7 @@ export default function SearchBox() {
         <div className="searchbox">
           <span>
             <form>
-              <label className="searchbox__label" for="searchinput">MatTube</label>
+              <label className="searchbox__label" htmlFor="searchinput">MatTube</label>
               <input className="searchbox__input" type="text" id="searchinput" name="searchinput" />
               <button className="btn btn--primary">GO</button>
             </form>
