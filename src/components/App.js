@@ -13,6 +13,7 @@ function App() {
       <SearchResultList />
       <VideoPlayer />
       <RelatedSearchList />
+      <p>test</p>
     </div>
   );
 }
