@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/app.css';
 import SearchBox from './SearchBox';
 import SearchResultList from './SearchResultList';
@@ -7,6 +7,8 @@ import RelatedSearchList from './RelatedSearchList';
 
 
 function App() {
+  const [ search, setSearch ] = useState();
+  console.log(search);
   return (
     <div>
       <SearchBox />
