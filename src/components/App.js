@@ -7,8 +7,6 @@ import RelatedSearchList from './RelatedSearchList';
 
 
 function App() {
-  const [ search, setSearch ] = useState();
-  console.log(search);
   return (
     <div>
       <SearchBox />
