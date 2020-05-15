@@ -1,16 +1,16 @@
 import React from 'react';
 import SearchResult from './SearchResult';
 
-export default function SearchResultList() {
+export default function SearchResultList( props ) {
+    const {
+      search
+    } = props;
+
     return (
         <div className="search-result-list">
-          <div>
             <SearchResult />
-            <SearchResult />      
-          </div>
-          <div>
-            <h3>search string</h3>
-          </div>
+            <SearchResult />
+            <span>\{search}\</span>
         </div>
     )
 }

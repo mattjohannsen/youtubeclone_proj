@@ -7,10 +7,21 @@ import RelatedSearchList from './RelatedSearchList';
 
 
 function App() {
+  const [ search, setSearch ] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`Submitting Search ${search}`)
+  }
+
   return (
-    <div>
-      <SearchBox />
-      <SearchResultList />
+    <div className="searchbox">
+      <SearchBox 
+        search={search} 
+        setSearch={setSearch}
+        handleSubmit={handleSubmit}
+      />
+      <SearchResultList search={search}/>
       <VideoPlayer />
       <RelatedSearchList />
       <p>test</p>

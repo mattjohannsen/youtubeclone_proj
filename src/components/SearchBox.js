@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export default function SearchBox() {
-  const [ search, setSearch ] = useState("");
+export default function SearchBox(props) {
+  const {
+  search,
+  setSearch,
+  handleSubmit
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert(`Submitting Search ${search}`)
-  }
+  } = props;
 
   return (
     <div className="searchbox">
@@ -17,11 +17,12 @@ export default function SearchBox() {
             className="searchbox__input" 
             type="text" 
             value={search}
+            //onChange={e => setSearch({ search: e.target.value })}
             onChange={e => setSearch(e.target.value)}
           />
           <input type="submit" value="GO" className="btn btn--primary"/>
         </form>
       </span>
     </div>
-    )
+    );
 }
