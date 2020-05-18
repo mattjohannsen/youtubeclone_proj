@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function SearchResult() {
     return (
-        <div className="searchresult">
-            This is a SearchResult
+        <div className="video-item">
+            This is a video item
         </div>
     )
 }

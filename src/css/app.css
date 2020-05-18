@@ -2,10 +2,10 @@
 @import 'font.css';
 @import 'buttons.css';
 @import 'searchbox.css';
-@import 'search-result-list.css';
+@import 'video-list.css';
 @import 'videoplayer.css';
-@import 'related-search.css';
-@import 'related-search-list.css';
+@import 'related-video.css';
+@import 'related-video-list.css';
 
 *, *::before, *::after {
     font-family: RobotoCondensed, sans-serif;

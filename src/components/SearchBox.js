@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function SearchBox(props) {
   const {
-  search,
-  setSearch,
+  searchphrase,
+  setSearchPhrase,
   handleSubmit
 
   } = props;
@@ -16,9 +16,9 @@ export default function SearchBox(props) {
           <input 
             className="searchbox__input" 
             type="text" 
-            value={search}
-            //onChange={e => setSearch({ search: e.target.value })}
-            onChange={e => setSearch(e.target.value)}
+            value={searchphrase}
+            //onChange={e => setSearchPhrase({ search: e.target.value })}
+            onChange={e => setSearchPhrase(e.target.value)}
           />
           <input type="submit" value="GO" className="btn btn--primary"/>
         </form>

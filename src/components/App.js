@@ -1,34 +1,34 @@
 import React, { useState } from 'react';
 import '../css/app.css';
 import SearchBox from './SearchBox';
-import SearchResultList from './SearchResultList';
+import VideoList from './VideoList';
 import VideoPlayer from './VideoPlayer';
 
-import RelatedSearchList from './RelatedSearchList';
+import RelatedVideoList from './RelatedVideoList';
 
 
 function App() {
-  const [ search, setSearch ] = useState("");
+  const [ searchphrase, setSearchPhrase ] = useState("");
   //const [ selectedSearch, setSelectedSearch ] = useState("");
   const [ goSearch, setGoSearch ] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`Submitting Search ${search}`);
-    if(search != ''){setGoSearch(true)}
+    alert(`Submitting Search ${searchphrase}`);
+    if(searchphrase !== ''){setGoSearch(true)}
     console.log(goSearch);
   }
 
   return (
     <div className="searchbox">
       <SearchBox 
-        search={search} 
-        setSearch={setSearch}
+        searchphrase={searchphrase} 
+        setSearchPhrase={setSearchPhrase}
         handleSubmit={handleSubmit}
       />
-      {goSearch && <SearchResultList search={search}/>}
+      {goSearch && <VideoList searchphrase={searchphrase}/>}
       <VideoPlayer />
-      <RelatedSearchList />
+      <RelatedVideoList />
       <p>test</p>
     </div>
   );
