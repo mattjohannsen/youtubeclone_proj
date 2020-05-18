@@ -6,22 +6,25 @@ export default function VideoList( props ) {
     const {
       searchphrase
     } = props;
-    const [videos, setVideos] = useState(sampleYoutubeAPI);
+    const [videos, setVideos] = useState([]);
 
-/*     useEffect(() => {
+    useEffect(() => {
         axios
-          .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=fishing&type=video&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
+          .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${searchphrase}&type=video&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
           .then(response => {
-            console.log(response.data)
-            setVideos(response.data)
+            console.log(response.data.items)
+            setVideos(response.data.items)
           });
-      }, []); */
+      }, []);
 
     return (
         <div className="video-list"> 
-          {videos[0].items.map(video => {
+          {videos.map(video => {
             return (
-              <VideoItem key={video.id.videoId}/>
+              <VideoItem 
+                key={video.id.videoId} 
+                title={video.snippet.title}
+              />
             )
           })}
 
@@ -33,16 +36,6 @@ export default function VideoList( props ) {
 }
 
 const sampleYoutubeAPI = [
-  {
-    "kind": "youtube#searchListResponse",
-    "etag": "tP4wCKSFWXOGjfTxgq4D3-EuZt8",
-    "nextPageToken": "CAUQAA",
-    "regionCode": "US",
-    "pageInfo": {
-      "totalResults": 1000000,
-      "resultsPerPage": 5
-    },
-    "items": [
       {
         "kind": "youtube#searchResult",
         "etag": "c8_rQSLT53k6g3FNPHJ1xQvgLgY",
@@ -212,7 +205,5 @@ const sampleYoutubeAPI = [
           "liveBroadcastContent": "none",
           "publishTime": "2020-05-05T23:00:11Z"
         }
-      }
-    ]
   }  
 ]
