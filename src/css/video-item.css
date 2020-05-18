@@ -1,3 +1,29 @@
 .video-item {
     text-align: center;
+    padding: 5px;
+    clear: both;
 }
+
+.video-item-image{
+    float: left;
+    padding: 20px;
+}
+
+.video-item-title{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.video-item-description {
+    font-size: medium;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

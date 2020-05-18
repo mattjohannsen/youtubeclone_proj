@@ -9,16 +9,15 @@ export default function SearchResult(props) {
     } = props
     return (
         <div className="video-item">
-          <span>
+          <div>
             <img 
               src={url} 
               alt={description} 
+              className="video-item-image"
             />
-          </span>
-          <span>
-            <h1>{title}</h1>
-            <h5>{description}</h5>
-          </span>
+          </div>
+          <div className="video-item-title">{title}</div>
+          <div className="video-item-description">{description}</div>
         </div>
     )
 }

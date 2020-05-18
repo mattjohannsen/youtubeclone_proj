@@ -6,6 +6,7 @@
 @import 'videoplayer.css';
 @import 'related-video.css';
 @import 'related-video-list.css';
+@import 'video-item.css';
 
 *, *::before, *::after {
     font-family: RobotoCondensed, sans-serif;
