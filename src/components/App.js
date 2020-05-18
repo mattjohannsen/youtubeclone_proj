@@ -15,7 +15,7 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
     alert(`Submitting Search ${searchphrase}`);
-    if(searchphrase !== ''){setGoSearch(true)}
+    if(searchphrase != ''){setGoSearch(true)}
     console.log(goSearch);
   }
 
@@ -29,7 +29,7 @@ function App() {
       {goSearch && <VideoList searchphrase={searchphrase}/>}
       <VideoPlayer />
       <RelatedVideoList />
-      <p>test</p>
+      <p>{searchphrase}</p>
     </div>
   );
 }
