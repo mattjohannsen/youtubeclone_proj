@@ -4,7 +4,8 @@ import axios from 'axios';
 
 export default function VideoList( props ) {
     const {
-      searchphrase
+      searchphrase,
+      setVideo
     } = props;
     const [videos, setVideos] = useState([]);
     var apiSearchPhrase = prepareSearchString(searchphrase);
@@ -31,7 +32,10 @@ export default function VideoList( props ) {
             return (
               <VideoItem 
                 key={video.id.videoId} 
+                id={video.id.videoId}
                 title={video.snippet.title}
+                url={video.snippet.thumbnails.medium.url}
+                description={video.snippet.description}
               />
             )
           })}
