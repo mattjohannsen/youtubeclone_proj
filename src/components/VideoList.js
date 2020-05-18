@@ -19,9 +19,15 @@ export default function VideoList( props ) {
 
     return (
         <div className="video-list"> 
-          /{videos[0].items[0].snippet.title}/
+          {videos[0].items.map(video => {
+            return (
+              <VideoItem key={video.id.videoId}/>
+            )
+          })}
+
+          {/* /{videos[0].items[1].snippet.title}/
           <VideoItem />
-            <span>\{searchphrase}\</span>
+            <span>\{searchphrase}\</span> */}
         </div>
     )
 }
