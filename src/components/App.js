@@ -26,7 +26,7 @@ function App() {
         setSearchPhrase={setSearchPhrase}
         handleSubmit={handleSubmit}
       />
-      {goSearch && <VideoList searchphrase={searchphrase}/>}
+      {goSearch && <VideoList searchphrase={searchphrase} />}
       <VideoPlayer />
       <RelatedVideoList />
       <p>{searchphrase}</p>

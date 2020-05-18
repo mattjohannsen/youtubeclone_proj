@@ -7,15 +7,23 @@ export default function VideoList( props ) {
       searchphrase
     } = props;
     const [videos, setVideos] = useState([]);
+    var apiSearchPhrase = prepareSearchString(searchphrase);
 
     useEffect(() => {
         axios
-          .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${searchphrase}&type=video&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
+          .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${apiSearchPhrase}&type=video&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
           .then(response => {
             console.log(response.data.items)
             setVideos(response.data.items)
+            console.log(apiSearchPhrase)
           });
       }, []);
+
+    function prepareSearchString(input) {
+      var noSpacesOnEnds = input.trim();
+      var apiSearchPhrase = noSpacesOnEnds.split(' ').join('+');
+      return apiSearchPhrase;
+    }
 
     return (
         <div className="video-list"> 
