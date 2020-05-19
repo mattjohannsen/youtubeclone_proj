@@ -12,7 +12,7 @@ export default function VideoList( props ) {
 
     useEffect(() => {
         axios
-          .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${apiSearchPhrase}&type=video&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
+          .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${prepareSearchString(searchphrase)}&type=video&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
           .then(response => {
             console.log(response.data.items)
             setVideos(response.data.items)
@@ -36,6 +36,7 @@ export default function VideoList( props ) {
                 title={video.snippet.title}
                 url={video.snippet.thumbnails.medium.url}
                 description={video.snippet.description}
+                setVideo={setVideo}
               />
             )
           })}
@@ -47,7 +48,7 @@ export default function VideoList( props ) {
     )
 }
 
-const sampleYoutubeAPI = [
+/* const sampleYoutubeAPI = [
       {
         "kind": "youtube#searchResult",
         "etag": "c8_rQSLT53k6g3FNPHJ1xQvgLgY",
@@ -218,4 +219,4 @@ const sampleYoutubeAPI = [
           "publishTime": "2020-05-05T23:00:11Z"
         }
   }  
-]
+] */

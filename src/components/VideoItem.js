@@ -7,13 +7,16 @@ export default function SearchResult(props) {
         url,
         description
     } = props
+
     return (
         <div className="video-item">
           <div>
             <img 
+              id={id}
               src={url} 
               alt={description} 
               className="video-item-image"
+              //onClick={setVideo(id)}
             />
           </div>
           <div className="video-item-title">{title}</div>
